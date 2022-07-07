@@ -1,0 +1,158 @@
+@mixin flex($item, $content) {
+  display: flex;
+  align-items: $item;
+  justify-content: $content;
+}
+@mixin img($widht, $object, $height) {
+  width: $widht;
+  object-fit: $object;
+  height: $height;
+}
+@mixin li($li-s, $li-s-t) {
+  list-style: $li-s;
+  list-style-type: $li-s-t;
+}
+@mixin alink($t-dec, $color, $f-size) {
+  text-decoration: $t-dec;
+  color: $color;
+  font-size: $f-size;
+  &:hover {
+    color: #ff4136;
+  }
+}
+@mixin position(
+  $position,
+  $right,
+  $bottom,
+  $bg,
+  $color,
+  $f-size,
+  $b-radius,
+  $pad
+) {
+  position: $position;
+  right: $right;
+  bottom: $bottom;
+  background-color: $bg;
+  color: $color;
+  font-size: $f-size;
+  border-radius: $b-radius;
+  padding: $pad;
+}
+@mixin secondposition(
+  $mt,
+  $position,
+  $wight,
+  $top,
+  $left,
+  $right,
+  $bg,
+  $transform,
+  $transition
+) {
+  margin-top: $mt;
+  position: $position;
+  width: $wight;
+  top: $top;
+  left: $left;
+  right: $right;
+  background-color: $bg;
+  transform: $transform;
+  transition: $transition;
+}
+@mixin ulnav($pad, $column) {
+  display: flex;
+  padding: $pad;
+  flex-direction: $column;
+}
+@mixin positionhover($position, $bottom, $right) {
+  position: $position;
+  bottom: $bottom;
+  right: $right;
+  &:hover {
+    color: #ff4136;
+  }
+}
+@mixin threeposition(
+  $op,
+  $transform,
+  $transition,
+  $position,
+  $top,
+  $right,
+  $bg,
+  $color,
+  $items,
+  $content,
+  $pad,
+  $borderleft
+) {
+  opacity: $op;
+  transform: $transform;
+  transition: $transition;
+  position: $position;
+  top: $top;
+  right: $right;
+  background-color: $bg;
+  color: $color;
+  display: flex;
+  align-items: $items;
+  justify-content: $content;
+  padding: $pad;
+  border-left: $borderleft;
+}
+@mixin oclock($pos, $botom, $left, $content, $item) {
+  position: $pos;
+  bottom: $botom;
+  left: $left;
+  display: flex;
+  justify-content: $content;
+  align-items: $item;
+}
+@mixin p($m, $bg, $color, $wight, $height) {
+  margin: $m;
+  background-color: $bg;
+  color: $color;
+  width: $wight;
+  height: $height;
+}
+@mixin name($ff, $fw) {
+  font-family: $ff;
+  font-weight: $fw;
+  &:hover {
+    color: #ff4136;
+    transition: 0.2s ease-in-out;
+  }
+}
+@mixin flex2($pad, $direction, $item, $content) {
+  padding: $pad;
+  display: flex;
+  flex-direction: $direction;
+  align-items: $item;
+  justify-content: $content;
+}
+@mixin svg($borber, $wight, $height, $color, $mb, $pad, $b-radius) {
+  border: $borber;
+  width: $wight;
+  height: $height;
+  color: $color;
+  margin-bottom: $mb;
+  padding: $pad;
+  border-radius: $b-radius;
+}
+@mixin input($wight, $b-radius, $pad, $gap, $direction, $items) {
+  width: $wight;
+  border-radius: $b-radius;
+  padding: $pad;
+  gap: $gap;
+  display: flex;
+  flex-direction: $direction;
+  align-items: $items;
+}
+@mixin vso($b-radius, $bg, $color, $pad, $border) {
+  border-radius: $b-radius;
+  background-color: $bg;
+  color: $color;
+  padding: $pad;
+  border: $border;
+}

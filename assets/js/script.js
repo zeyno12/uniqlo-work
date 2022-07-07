@@ -22,11 +22,24 @@ var swiper = new Swiper(".mySwiper", {
     window.open(url);
 };
 var plus =document.querySelector("#increment");
-var deyer =document.querySelector("#value");
 var minus =document.querySelector("#decirement");
-var sum=0
-plus.addEventListener("click",(e)=>{
+var deyer =document.querySelector("#value");
+increment.addEventListener("click", incrementdeyer);
+decirement.addEventListener("click", decirementdeyer);
+var sum=0;
+function incrementdeyer(e){
+   e.preventDefault();
+   sum++;
+   deyer.innerText = sum;
+}
+
+function decirementdeyer (e){
   e.preventDefault();
-  sum+=1;
-  deyer.innerHTML=sum
-});
+  if(sum>0){
+    sum--;
+    deyer.innerText=sum;
+    
+  }else{
+    deyer.innerText=0;
+  }
+}
